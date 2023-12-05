@@ -42,6 +42,7 @@ public class Moves : MonoBehaviour
 
         Vector3 target = Vector3.zero;
 
+
         target += new Vector3(Random.Range(-1.0f, 1.0f), 0, Random.Range(-1.0f, 1.0f));
         target.Normalize();
         target *= radius;
@@ -49,10 +50,14 @@ public class Moves : MonoBehaviour
         Vector3 targetWorld = this.gameObject.transform.InverseTransformVector(target + 
                                                 new Vector3(0, 0, distance));
 
-        if (!floor.bounds.Contains(targetWorld))
-        {
-            targetWorld = -transform.position * 0.1f;
-        };
+        //Debug.Log("target 2");
+        //Debug.Log(target);
+
+        //if (!floor.bounds.Contains(targetWorld))
+        //{
+        //    targetWorld = -transform.position * 0.1f;
+        //};
+        //Debug.Log(targetWorld);
 
         agent.destination = targetWorld;
     }
