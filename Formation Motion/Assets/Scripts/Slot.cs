@@ -18,19 +18,5 @@ public class Slot : MonoBehaviour
     // 4 3 4
 
     // Start is called before the first frame update
-    void Start()
-    {
-        Spawn();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void Spawn()
-    {
-
-    }
 }
